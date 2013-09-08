@@ -1,0 +1,12 @@
+CACHE MANIFEST
+CACHE:
+/offline/firefox_logo-only_RGB.png
+/offline/style.css
+/offline/srcpt.js
+/offline/page2.html
+
+FALLBACK:
+/ /offline/page3.html
+
+NETWORK:
+/offline/clock.js

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+	<script>
+	function save(name)
+	{
+		str1=document.getElementById(name).value;
+		localStorage.clear();
+		localStorage.setItem(name,str1);
+	}
+	</script>
+</head>
+<body>
+	<input type="text" id="color" placeholder="Enter color"></input>
+	<input type="button" id="Bcolor" onclick='save("color")' value="Click!"></input>
+	<input type="text" id="textsize" placeholder="Enter text size"></input>
+	<input type="button" id="Bfont" onclick='save("textsize")' value="Click!"></input>
+	<input type="text" id="weight" placeholder="Enter weight"></input>
+	<input type="button" id="Bweight" onclick='save("weight")' value="Click!"></input>
+	<input type="text" id="style" placeholder="Enter style"></input>
+	<input type="button" id="Bstyle" onclick='save("style")' value="Click!"></input>
+	<input type="text" id="bgcolor" placeholder="Enter background color"></input>
+	<input type="button" id="Bbgcolor" onclick='save("bgcolor")' value="Click!"></input>
+	<input type="text" id="txtDec" placeholder="Enter text decoration"></input>
+	<input type="button" id="BtxtDec" onclick='save("txtDec")' value="Click!"></input>
+</body>
+</html>

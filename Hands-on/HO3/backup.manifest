@@ -1,0 +1,9 @@
+CACHE MANIFEST
+
+/pag1.html
+/page2.html
+/page5.html
+
+FALLBACK:
+
+/ /page3.html

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas Web Worker</title>
+		<style>
+		#myCanvas
+		{
+			border:1px solid black;	
+		}
+		</style>
+		<script>
+			var flag=0;
+			var temp=10;
+			
+			function fun()
+			{
+				var c=document.getElementById('myCanvas');
+				var ctx=c.getContext('2d');
+				if(flag==0)
+				{
+					c.width=c.width;
+					ctx.fillStyle='yellow';
+					ctx.fillRect(150-temp,150-temp,2*temp,2*temp);
+					temp+=10;
+					if(temp>150)
+					{
+						flag=1;
+						temp=10;
+					}					
+					
+			
+				}
+				else
+				{
+					c.width=c.width;
+					ctx.beginPath();					
+					ctx.fillStyle='blue';
+					ctx.arc(150,150,temp,0,2*Math.PI,false);
+					ctx.fill();
+					temp+=10;
+					if(temp>150)
+					{
+						flag=0;
+						temp=10;
+					}	
+				}
+				
+				setTimeout(fun,10);
+			}
+			function createWorker()
+			{
+				var data = document.getElementById("ip").value;
+				myworker=new Worker("./task.js");
+				myworker.onmessage=print;
+				myworker.postMessage(data);
+			}
+			function print(event)
+			{
+				var results=event.data;
+				textar=document.getElementById("op");
+				textar.value=results;
+			}
+		</script>
+	</head>
+	<body onload="fun()">
+	<canvas id="myCanvas" width="300" height="300"></canvas><br/>
+	
+	<input type="text" id="ip" name="input"><br/>
+	<input type="textarea" id="op" name="output"><br/>
+	<input type="button" onClick="createWorker()" value="Sub"><br/>
+	</body>
+</html>

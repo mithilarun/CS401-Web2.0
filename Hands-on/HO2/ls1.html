@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+	<script>
+	function save()
+	{
+		var name=document.getElementById("name");
+		var usn=document.getElementById("usn");
+		var dept=document.getElementById("dept");
+		var sem=document.getElementById("sem");
+		
+		localStorage.clear();
+		localStorage.setItem("name",name.value);
+		localStorage.setItem("usn",usn.value);
+		localStorage.setItem("dept",dept.value);
+		localStorage.setItem("sem",sem.value);
+
+		if(localStorage.length!=4)
+		{
+			for(i=0;i<localStorage.length;i++)
+			{
+				myKey=localStorage.key(i);
+				localStorage.removeItem(myKey);
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="text" id="name" placeholder="Enter Name"></input><br/>
+	<input type="text" id="usn" placeholder="Enter USN"></input><br/>
+	<input type="text" id="dept" placeholder="Enter Dept"></input><br/>
+	<input type="text" id="sem" placeholder="Enter Semester"></input><br/>
+	<input type="button" id="click" value="Click!" onclick="save()"></input><br/>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Local Storage 2</title>
+	</head>
+	<script>
+	window.addEventListener("storage",change,false);
+	function change(event)
+	{
+		key=event.key;
+		if(key=="color")
+		{
+			val1=event.newValue;
+			document.getElementById("body").style.color=val1;
+		}
+		if(key=="textsize")
+		{
+			val1=event.newValue;
+			document.getElementById("body").style.fontSize=val1+"px";
+		}
+		if(key=="weight")
+		{
+			val1=event.newValue;
+			document.getElementById("body").style.fontWeight=val1;
+		}
+		if(key=="style")
+		{
+			val1=event.newValue;
+			document.getElementById("body").style.fontStyle=val1;
+		}
+		if(key=="bgcolor")
+		{
+			val1=event.newValue;
+			document.getElementById("body").style.background=val1;
+		}
+		if(key=="txtDec")
+		{
+			val1=event.newValue;
+			document.getElementById("body").style.textDecoration=val1;
+		}
+	}
+	
+	</script>
+	
+	<body>
+	<p id="body" style="color:black; font-size:10px;">
+	This is a test.
+	</p>
+	</body>
+</html>

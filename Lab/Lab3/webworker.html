@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="ip"></input>
+<button onclick="startWorker()">Start Worker</button>
+<p id="res"></p>
+<br><br>
+
+<script>
+var w;
+	
+function startWorker()
+{
+	var num=document.getElementById("ip").value;
+	if(typeof(Worker)!=="undefined")
+	{
+	    	w=new Worker("fact.js");
+		w.postMessage(num);
+		w.onmessage = function (event) 
+		{
+    			document.getElementById("res").innerHTML=event.data;
+  		};
+	}
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Resume</title>
+<style>
+@keyframes showBlock
+{
+from {top:0px; opacity: 0.0;}
+to {top:200px; opacity: 1.0; visibility:visible;}
+}
+@-webkit-keyframes showBlock
+{
+from {top:0px; opacity: 0.0;}
+to {top:200px; opacity: 1.0; visibility: visible;}
+}
+body
+{
+background:url(bground.jpg);
+background-size:1600px 800px;
+background repeat: no-repeat;
+}
+.dat
+{
+visibility: hidden;
+position: absolute;
+left: 400px;
+border: 2px solid;
+padding:10px 40px; 
+background:gold;
+width:500px;
+}
+#name
+{
+position: absolute;
+left: 475px;
+}
+#fn
+{
+display: inline;
+color:#2BBBD8;
+font-size: 75px;
+}
+#ln
+{
+display: inline;
+color:yellow;
+font-size: 75px;
+}
+#blk1
+{
+position: absolute;
+left: 50px;
+top: 100px;
+border: 2px solid;
+padding:10px 40px; 
+background:gold;
+width:200px;
+}
+#blk2
+{
+position: absolute;
+left: 350px;
+top: 100px;
+border: 2px solid;
+padding:10px 40px; 
+background:gold;
+width:200px;
+}
+#blk3
+{
+position: absolute;
+left: 650px;
+top: 100px;
+border: 2px solid;
+padding:10px 40px; 
+background:gold;
+width:200px;
+}
+#blk4
+{
+position: absolute;
+left: 950px;
+top: 100px;
+border: 2px solid;
+padding:10px 40px; 
+background:gold;
+width:200px;
+}
+#blk1:hover ~ #blk1Dat
+{
+animation: showBlock 2s ease;
+-webkit-animation: showBlock 2s ease;
+animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+}
+#blk2:hover ~ #blk2Dat
+{
+animation: showBlock 2s ease;
+-webkit-animation: showBlock 2s ease;
+animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+}
+#blk3:hover ~ #blk3Dat
+{
+animation: showBlock 2s ease;
+-webkit-animation: showBlock 2s ease;
+animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+}
+#blk4:hover ~ #blk4Dat
+{
+animation: showBlock 2s ease;
+-webkit-animation: showBlock 2s ease;
+animation-fill-mode: forwards;
+-webkit-animation-fill-mode: forwards;
+}
+</style>
+</head>
+
+<body>
+<div id="name"><p id="fn">Mithil</p><p id="ln">ARUN</p></div>
+<div id="blk1">EDUCATION</div>
+<div id="blk2">COURSEWORK</div>
+<div id="blk3">EXPERIENCE</div>
+<div id="blk4">PROJECTS</div>
+<div id="blk1Dat" class="dat">
+<ul>
+<li>Class 10 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>Class 12 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>BE - University of Someplace, Someotherplace</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+</ul>
+</div>
+<div id="blk2Dat" class="dat">
+<li>Class 10 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>Class 12 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>BE - University of Someplace, Someotherplace</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+</ul>
+</div>
+<div id="blk3Dat" class="dat">
+<li>Class 10 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>Class 12 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>BE - University of Someplace, Someotherplace</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+</ul>
+</div>
+<div id="blk4Dat" class="dat">
+<li>Class 10 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>Class 12 - Someplace High</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+<li>BE - University of Someplace, Someotherplace</li>
+<li>
+	<ul>
+		<li>90.0%</li>
+	</ul>
+</li>
+</ul>
+</div>
+</body>
+
+</html>
